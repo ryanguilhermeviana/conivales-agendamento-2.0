@@ -235,8 +235,10 @@ li, ul {
 }
 
 .teste {
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* Página de pacientes (cadastrar_paciente.html) */
