@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body class="main-margin main-grid">
+    <section class="bk-gray">
+        <nav class="menu-nav">
+            <div class="menu-logo">
+                <div class="menu-logo-img">
+                    <img src="./img/logo_transp.png" alt="Logo do Conivales" class="menu-img">
+                </div>
+                <h1>CONIVALES</h1>
+            </div>
+            <div class="menu-menu">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="cadastrar_paciente.html">Cadastrar paciente</a></li>
+                    <li><a href="agendar_exames.html">Agendar exames</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </div>
+            <div class="menu-user">
+                <!-- <img width="32" height="32" src="https://img.icons8.com/puffy-filled/32/user.png" alt="user" /> -->
+                <div>
+                    <img src="./img/user.svg" alt="" width="40" height="40" class="menu-user-border">
+                </div>
+                <h4>Ryan Guilherme</h4>
+                <p>email@email.com</p>
+            </div>
+        </nav>
+    </section>
+
+    <section class="section-form">
+        <div class="formulario-cadastro">
+            <h1>Cadastro</h1>
+            <form action="">
+                <label for="fname">Nome completo:</label>
+                <input type="text" id="fname" name="fname">
+
+                <label for="fmunicipio">Município:</label>
+                <select name="fmunicipio" id="fmunicipio">
+                    <option value="amparo_sao_francisco">Amparo do São Francisco</option>
+                    <option value="boquim">Boquim</option>
+                    <option value="carira">Carira</option>
+                    <option value="muribeca">Muribeca</option>
+                    <option value="telha">Telha</option>
+                </select>
+
+                <label for="fcpf">CPF:</label>
+                <input type="text" id="fcpf" name="fcpf">
+
+                <label for="fcns">CNS:</label>
+                <input type="text" id="fcns" name="fcns">
+
+                <label for="fnascimento">Data de nascimento:</label>
+                <input type="date" id="fnascimento" name="fnascimento">
+
+                <label for="fmae">Nome da mãe:</label>
+                <input type="text" id="fmae" name="fmae">
+
+                <!-- <label for="fprocedimento">Procedimento:</label>
+                <select name="fprocedimento" id="fprocedimento">
+                    <option value="1">Radiografia Bilateral de Orbitas (pa + Obliquas + Hirtz)</option>
+                    <option value="2">Radiografia de Arcada Zigomático-malar (ap+ Obliquas)</option>
+                    <option value="3">Radiografia de Cotovelo</option>
+                    <option value="4">Ultrassonografia de Articulação</option>
+                    <option value="5">Ultrassonografia Mamaria Bilateral</option>
+                    <option value="6">Ultrassonografia Transvaginal</option>
+                    <option value="7">Tomografia Computadorizada de Coluna Cervical sem Contraste</option>
+                    <option value="8">Tomografia Computadorizada de Coluna Torácica</option>
+                    <option value="9">Ressonância Magnética de Bacia/Pelve</option>
+                    <option value="10">Ressonância Magnética de Coluna Torácica</option>
+                </select> -->
+            </form>
+        </div>
+    </section>

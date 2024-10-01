@@ -1,0 +1,347 @@
+:root {
+    --primary-color: #000;
+    --white-color: #FFF;
+    --btn-blue-primary: #007bff;
+    --btn-blue-secondary: rgba(0, 60, 255, 0.418);
+
+    --conivales-dark-2: #1D3F25;
+    --conivales-dark-1: #1E6931;
+    --conivales-primary: #129332;
+    --conivales-light-1: #9EFFB6;
+    --conivales-light-2: #C9FFD6;
+    --conivales-light-3: #D8FFE2;
+
+    --conivales-blue-dark-2: #181745;
+    --conivales-blue-dark-1: #242267;
+    --conivales-blue-primary: #302D89;
+    --conivales-blue-light-1: #333092;
+    --conivales-blue-light-2: #544FEF;
+
+    --gray-dark-3: #86888B;
+    --gray-dark-2: #A6AAAD;
+    --gray-dark-1: #C7CBCF; 
+    --gray-color: #f0f4f9;
+    --gray-ligth-1: #E8ECF1;
+
+ }
+ 
+* {
+    margin: 0;
+    padding: 0;
+ }
+
+html {
+    font-size: 62.5%;
+ }
+
+body {
+    font-size: 1.8rem;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--gray-color);
+ }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:  inherit;
+}
+
+li, ul {
+    list-style-type: none;
+}
+
+.bk-gray {
+    background-color: var(--gray-color);
+    border-right: 1px solid rgba(0, 0, 0, 0.108);
+    box-shadow: 1px 0px 5px 5px rgba(0, 0, 0, 0.212);
+    z-index: 1;
+}
+
+.bk {
+    background-color: var(--gray-ligth-1);
+}
+ 
+.section-white {
+    background-color: var(--gray-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container__box {
+    height: 50rem;
+    width: 90rem;
+    border: 0.1rem solid;
+    border-color: transparent;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: absolute;
+}
+
+.image-size {
+    display: block;
+    margin: auto;
+    margin-left: 12rem;
+    margin-bottom: 14.2rem;
+    width: 30rem;
+    height: 25rem;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.box__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box--right, .box--left {
+    background-color: var(--white-color);
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.formulario div {
+    margin: 1rem;
+    margin-left: 0;
+}
+
+.formulario input {
+    height: 2.5rem;
+    border-radius: 0.6rem;
+    border: 0.2rem solid gray;
+    padding:  0.4rem 0.4rem 0.4rem 0.6rem;
+    width: 100%;
+    font-size: 1.8rem;
+}
+
+.formulario input:focus {
+    border-color: var(--conivales-primary); 
+    outline: none; 
+}
+
+.formulario button {
+    background-color: var(--conivales-primary);
+    font-size: 1.8rem;
+    padding: 1rem 1rem;
+    border-radius: .6rem;
+    border-width: 0rem;
+    width: 15rem;
+    margin-top: 1rem;
+    color: var(--white-color);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.form__rodape {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+}
+
+/* Página Inicial (index.html) */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 15% 84.2%;
+    gap: 10px;
+}
+
+.menu-nav {
+    height: 100vh;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 18rem auto 10rem;
+}
+
+.menu-logo {
+    justify-self: center;
+    align-self: center;
+    color: var(--conivales-dark-1);
+    font-size: 2.2rem;
+}
+
+.menu-logo-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.4rem;
+}
+
+.menu-img {
+    width: 10rem;
+    height: auto;
+    /* margin-left: 1rem; */
+}
+
+.menu-menu {
+    justify-self: center;
+    padding-top: 3rem;
+}
+
+.menu-menu ul li {
+    margin: 1rem;
+    padding: 0.8rem 1.6rem;
+}
+
+.menu-menu ul li:hover,
+.menu-menu ul li.active {
+    border: 1px solid var(--conivales-blue-light-1);
+    border-radius: 2rem;
+    background-color: var(--conivales-blue-light-1);
+    color: white;
+}
+
+.menu-user {
+    justify-self: center;
+    text-align: center;
+    align-self: self-end;
+    margin-bottom: 2rem;
+}
+
+.menu-user h4 {
+    font-size: 1.6rem;
+}
+
+.menu-user p {
+    font-size: 1.4rem;
+    color: gray;
+    padding: .5rem;
+}
+
+.menu-user-border {
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Página de pacientes (cadastrar_paciente.html) */
+
+.btn-search {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-search a {
+    margin-left: 20.5rem;
+    align-self: flex-end;
+    border: 1px solid var(--conivales-blue-light-1);
+    border-radius: 2rem;
+    background-color: var(--conivales-blue-light-1);
+    color: white;
+    padding: 0.8rem 1.6rem;
+}
+
+.btn-search input {
+    width: 375px; 
+    height: 35px;
+    margin-right: 3rem;
+    padding: 1.8rem;
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    border: 2px solid gray;
+}
+
+.btn-search input:active,
+.btn-search input:focus {
+    border: 2px solid var(--btn-blue-secondary);
+    box-shadow: 0 0 8px 1px var(--btn-blue-secondary);
+    outline: none;
+}
+
+.table-espace {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
+    
+}
+
+.table-main {
+    width: 120rem;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: var(--gray-color);
+}
+
+.table-main td:last-child {
+    text-align: center;
+}
+
+.table-main thead {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.table--edit tr th {
+    font-weight: 500;
+    background-color: var(--gray-dark-2);
+    color: black;
+}
+
+.table--edit tr th, 
+.table--edit tr td {
+    padding: 1rem;
+}
+
+.table--edit tr:nth-child(odd) {
+    background-color: var(--gray-ligth-1);
+}
+
+.table--edit tr:hover{
+    background-color: var(--gray-dark-1);
+}
+
+
+/* Página de cadastro de paciente */
+
+.section-form {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-cadastro {
+    width: 80rem;
+}
+
+.formulario-cadastro form {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.formulario-cadastro label,
+.formulario-cadastro input,
+.formulario-cadastro select {
+    width: 100%;
+    margin: 0.5rem;
+}
+
+.formulario-cadastro input, 
+.formulario-cadastro select {
+    font-size: 1.8rem;
+    padding: 0.4rem;
+}
