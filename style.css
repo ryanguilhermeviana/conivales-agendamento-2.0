@@ -234,6 +234,11 @@ li, ul {
     margin-bottom: 1rem;
 }
 
+.teste {
+    display: flex;
+    justify-content: center;
+}
+
 /* Página de pacientes (cadastrar_paciente.html) */
 
 .btn-search {
