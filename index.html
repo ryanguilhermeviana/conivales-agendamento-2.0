@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=h1, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,9 +40,52 @@
         </nav>
     </section>
 
-    <section class="section-white teste">
-        <div>
-            Area para graficos e relatorios da ADM
+    <section class="section-white dashboard">
+        <div class="titulo-dashboard">
+            <div>
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="a a2">
+                <p>Período</p>
+                <select name="fperiodo" id="fperiodo" class="a3">
+                    <option value="3">Últimos 3 meses</option>
+                    <option value="6">Últimos 6 meses</option>
+                    <option value="12">Últimos 12 meses</option>
+                </select>
+            </div>
+        </div>
+        <div class="b">
+            <div class="b2 b3">
+                <h3>Municípios</h3>
+                <p>21</p>
+            </div>
+
+            <div class="b2 b3">
+                <h3>Exames realizados</h3>
+                <p>500</p>
+            </div>
+
+            <div class="b2 b3">
+                <h3>Exames pendentes</h3>
+                <p>50</p>
+            </div>
+
+            <div class="b2 b3">
+                <h3>Valor total dos exames</h3>
+                <p>R$ 2.598,84</p>
+            </div>
+            <div class="b2 b3">
+                <h3>Valor total das taxas</h3>
+                <p>R$ 500,64</p>
+            </div>
+        </div>
+
+        <div class="c">
+            <h3>Gráficos</h3>
+            <div class="c2">
+                <canvas id="myChart" style="height: 350px;"></canvas>
+            </div>
         </div>
     </section>
 
@@ -57,6 +101,71 @@
             if (item.href === currentUrl) {
                 // Adicionar a classe 'active' ao item pai (li)
                 item.parentElement.classList.add('active');
+            }
+        });
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        const data = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    label: 'Radiografia',
+                    data: [500, 700, 900, 600, 800, 400, 1000, 500, 700, 600, 900, 700],
+                    backgroundColor: 'rgba(17, 141, 255, 1)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Ultrassonografia',
+                    data: [300, 400, 600, 700, 500, 800, 900, 600, 500, 700, 600, 400],
+                    backgroundColor: 'rgba(18, 35, 158, 1)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Ressonância',
+                    data: [700, 500, 400, 900, 600, 700, 500, 400, 600, 500, 700, 600],
+                    backgroundColor: 'rgba(230, 108, 55, 1)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }
+            ]
+        };
+
+        // Calculando a média de cada mês
+        const monthlyAverage = data.datasets[0].data.map((_, i) => {
+            const total = data.datasets.reduce((sum, dataset) => sum + dataset.data[i], 0);
+            return total / data.datasets.length;
+        });
+
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 1000
+                    }
+                },
+                plugins: {
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                yMin: monthlyAverage[0],
+                                yMax: monthlyAverage[11],
+                                borderColor: 'rgba(0, 0, 0, 1)',
+                                borderWidth: 2,
+                                label: {
+                                    enabled: true,
+                                    content: 'Média'
+                                }
+                            }
+                        }
+                    }
+                }
             }
         });
     </script>

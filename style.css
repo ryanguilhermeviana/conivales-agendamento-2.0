@@ -236,12 +236,69 @@ li, ul {
     margin-bottom: 1rem;
 }
 
-.teste {
-    height: 100vh;
+.dashboard {
+    margin: 4rem;
+}
+
+.titulo-dashboard {
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+}
+
+.a {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
+
+.a2 p,
+.a2 select {
+    margin: 0.5rem;
+}
+
+.a3 {
+    padding: 0.3rem;
+    height: 3rem;
+}
+
+.b {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    
+}
+
+.b2 {
+    height: 5rem;
+    padding: 2rem;
+    border: 2px solid gray;
+    border-radius: 2rem;
+    background-color: var(--white-color);
+}
+
+.b3 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+.c {
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    height: 35rem;
+    margin-top: 5rem;
+}
+
+.c2 {
+    width: 100%;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 35rem;
+}
+
 
 /* Página de pacientes (cadastrar_paciente.html) */
 
