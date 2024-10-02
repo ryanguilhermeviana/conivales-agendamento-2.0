@@ -20,6 +20,7 @@
     --gray-dark-3: #86888B;
     --gray-dark-2: #A6AAAD;
     --gray-dark-1: #C7CBCF; 
+    --gray-dark-custom: rgb(216, 217, 219); 
     --gray-color: #f0f4f9;
     --gray-ligth-1: #E8ECF1;
 
@@ -55,7 +56,7 @@ li, ul {
 }
 
 .bk-gray {
-    background-color: var(--gray-color);
+    background-color: var(--white-color);
     border-right: 1px solid rgba(0, 0, 0, 0.108);
     box-shadow: 1px 0px 5px 5px rgba(0, 0, 0, 0.212);
     z-index: 1;
@@ -200,6 +201,7 @@ li, ul {
 .menu-menu ul li {
     margin: 1rem;
     padding: 0.8rem 1.6rem;
+    width: 17rem;
 }
 
 .menu-menu ul li:hover,
@@ -331,24 +333,75 @@ li, ul {
 
 .formulario-cadastro {
     width: 80rem;
+    font-size: 1.6rem;
+    margin-top: 2rem;
 }
 
 .formulario-cadastro form {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
-    margin-top: 10rem;
 }
 
 .formulario-cadastro label,
 .formulario-cadastro input,
-.formulario-cadastro select {
+.formulario-cadastro select,
+.formulario-cadastro textarea {
     width: 100%;
     margin: 0.5rem;
 }
 
+.formulario-cadastro textarea {
+    resize: none;
+    font-family: inherit;
+}
+
 .formulario-cadastro input, 
-.formulario-cadastro select {
-    font-size: 1.8rem;
-    padding: 0.4rem;
+.formulario-cadastro select,
+.formulario-cadastro textarea {
+    font-size: 1.5rem;
+    padding: 0.8rem 0.8rem;
+    border-radius: 1.2rem;
+    outline: none;
+    border: 0.1rem solid gray;
+}
+
+.formulario-cadastro input:focus, 
+.formulario-cadastro select:focus,
+.formulario-cadastro textarea:focus {
+    border: 1px solid var(--btn-blue-secondary);
+    box-shadow: 0 0 8px 1px var(--btn-blue-secondary);
+    outline: none;
+}
+
+.formulario-borda {
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.formulario-cadastro label {
+    margin-bottom: 0;
+}
+
+.formulario-cadastro input, 
+.formulario-cadastro select,
+.formulario-cadastro textarea {
+    margin-bottom: 1.7rem;
+}
+
+.cadastrar-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cadastrar-button a {
+    width: 10rem;
+    border: 1px solid var(--conivales-blue-light-1);
+    border-radius: 2rem;
+    background-color: var(--conivales-blue-light-1);
+    color: white;
+    padding: 0.8rem 1.6rem;
+    text-align: center;
 }
