@@ -87,18 +87,10 @@ li, ul {
     position: absolute;
 }
 
-.image-size {
-    display: block;
-    margin: auto;
-    margin-left: 12rem;
-    margin-bottom: 14.2rem;
-    width: 30rem;
-    height: 25rem;
-}
 
 .box {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
 }
 
 .box__grid {
@@ -109,6 +101,19 @@ li, ul {
 
 .box--right, .box--left {
     background-color: var(--white-color);
+}
+
+.box--left {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-left: 2rem;
+
+}
+
+.box--left h1 {
+    font-size: 4.5rem;
+    color: var(--conivales-dark-1);
 }
 
 .formulario h2 {
@@ -194,14 +199,26 @@ li, ul {
 }
 
 .menu-menu {
-    justify-self: center;
+    justify-self: left;
     padding-top: 3rem;
+    margin-left: 2.5rem;
+}
+
+.menu-menu--espacamento {
+    width: 20rem;
+    justify-items: center;
+    display: block;
+    margin-bottom: 1rem;
 }
 
 .menu-menu ul li {
-    margin: 1rem;
     padding: 0.8rem 1.6rem;
-    width: 17rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-menu ul li i {
+    margin-right: 1rem;
 }
 
 .menu-menu ul li:hover,
@@ -249,6 +266,7 @@ li, ul {
 .a {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .a2 p,
@@ -257,8 +275,16 @@ li, ul {
 }
 
 .a3 {
-    padding: 0.3rem;
+    padding: 0.3rem 0.6rem;
     height: 3rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    border-color: lightgray;
+}
+
+.a4 {
+    padding-left: 2rem;
+    font-size: 1.8rem;
 }
 
 .b {
@@ -270,10 +296,18 @@ li, ul {
 
 .b2 {
     height: 5rem;
-    padding: 2rem;
-    border: 2px solid gray;
+    padding: 1.5rem;
+    border: 1px solid lightgrey;
     border-radius: 2rem;
     background-color: var(--white-color);
+}
+
+.b2 h3 {
+    font-size: 1.6rem;
+}
+
+.b2 p {
+    font-size: 2.5rem;
 }
 
 .b3 {
@@ -282,11 +316,57 @@ li, ul {
     gap: 5px;
 }
 
+.b4 {
+    display: flex;
+    align-items: center;
+}
+
+.p-bold {
+    font-weight: bolder;
+}
+
+.green {
+    color: green;
+}
+
+
+.b5 {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    background-color: rgba(144, 238, 144, 0.616);
+    border: 1px solid green;
+    border-radius: 2rem;
+    padding: .1rem 0.5rem;
+}
+
+.b5 p {
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+    color: green;
+}
+
+.b6 {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    background-color: rgba(238, 144, 144, 0.616);
+    border: 1px solid rgb(230, 95, 95);
+    border-radius: 2rem;
+    padding: .1rem 0.5rem;
+}
+
+.b6 p {
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+    color: rgb(245, 45, 45);
+}
+
 .c {
     display: grid;
     grid-template-rows: 1fr 10fr;
     height: 35rem;
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .c2 {
@@ -310,7 +390,11 @@ canvas {
 
 .d3 {
     margin: 2rem 4rem 0rem 0rem;
-    /* margin-top: 2rem; */
+    background-color: var(--white-color);
+    padding: 1.5rem;
+    border: 1px solid lightgrey;
+    border-radius: 2rem;
+    width: 45rem;
 }
 
 hr {
@@ -321,6 +405,7 @@ hr {
 
 .e {
     font-size: 1.6rem;
+    width: 100%;
 }
 
 .e2 td {
@@ -340,8 +425,9 @@ hr {
 }
 
 .e4 {
-    text-align: center;
+    text-align: center; 
 }
+
 
 
 /* Página de pacientes (cadastrar_paciente.html) */
