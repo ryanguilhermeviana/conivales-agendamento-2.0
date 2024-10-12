@@ -68,6 +68,13 @@ li, ul {
  
 .section-white {
     background-color: var(--gray-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.correcao {
+    flex-direction: row;
 }
 
 .container {
@@ -431,85 +438,145 @@ hr {
 
 
 /* Página de pacientes (cadastrar_paciente.html) */
-
-.btn-search {
-    width: 100%;
-    height: 100px;
+.separador {
+    width: 150rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
-.btn-search a {
-    margin-left: 20.5rem;
-    align-self: flex-end;
+.nav-main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-search {
+    width: 100%;
+    height: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.btn-search--align {
+    display: flex;
+    align-items: center;
+}
+
+.btn-search--align * {
+    padding: 0 .5rem;
+}
+
+.btn-search--align i {
+    font-size: 2.8rem;
+}
+
+
+.btn--icon {
+    display: flex;
+    align-items: center;
     border: 1px solid var(--conivales-blue-light-1);
     border-radius: 2rem;
     background-color: var(--conivales-blue-light-1);
     color: white;
-    padding: 0.8rem 1.6rem;
+    padding: 0.8rem .8rem 0.8rem .4rem; 
+    font-size: 1.5rem;
+    margin: 0rem .3rem ;
 }
 
-.btn-search input {
-    width: 375px; 
-    height: 35px;
-    margin-right: 3rem;
-    padding: 1.8rem;
+.btn--icon i {
     font-size: 1.8rem;
-    border-radius: 2rem;
-    border: 2px solid gray;
 }
 
-.btn-search input:active,
-.btn-search input:focus {
+.btn-pesquisar-icon {
+    border: 2px solid lightgray;
+    border-radius: 2rem;
+    padding: .5rem .8rem .5rem 1rem;
+    width: 375px; 
+    height: 2.5rem;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+}
+
+.btn-pesquisar-icon input {
+    border: none;
+    font-size: 1.8rem;
+    width: 100%;
+    height: 100%;
+    margin-left: 1.5rem;
+}
+
+.btn-pesquisar-icon i {
+    color: rgb(128, 128, 128);
+}
+
+.btn-pesquisar-icon input:focus,
+.btn-pesquisar-icon input:active {
+    border: none;
+    outline: none;
+}
+
+.btn-pesquisar-icon:active,
+.btn-pesquisar-icon:focus,
+.btn-pesquisar-icon:focus-within {
     border: 2px solid var(--btn-blue-secondary);
     box-shadow: 0 0 8px 1px var(--btn-blue-secondary);
     outline: none;
 }
 
+.icone-azul {
+    color: var(--conivales-blue-primary);
+}
+
 .table-espace {
-    margin-top: 2rem;
+    margin-top: 1.6rem;
     display: flex;
     justify-content: center;
-    background-color: inherit;
-    
+    background-color: var(--white-color);
+    border: 1px solid lightgray;
+    border-radius: 2rem;
+    overflow: hidden;
 }
 
 .table-main {
-    width: 120rem;
+    width: 150rem;
     border-collapse: collapse;
-    text-align: left;
-    background-color: var(--gray-color);
-}
-
-.table-main td:last-child {
     text-align: center;
+    background-color: inherit;
 }
 
 .table-main thead {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
 }
 
+.table-th--align td:nth-child(2) {
+    text-align: left;
+  }
+
 .table--edit tr th {
-    font-weight: 500;
-    background-color: var(--gray-dark-2);
+    font-weight: bold;
     color: black;
+}
+
+.table--edit td i {
+    font-size: 1.9rem;
 }
 
 .table--edit tr th, 
 .table--edit tr td {
-    padding: 1rem;
-}
-
-.table--edit tr:nth-child(odd) {
-    background-color: var(--gray-ligth-1);
+    padding: .8rem 1.2rem;
+    max-height: 2.5rem;
 }
 
 .table--edit tr:hover{
-    background-color: var(--gray-dark-1);
+    background-color: rgba(179, 186, 223, 0.521);
 }
 
+.table--align {
+    text-align: center;
+}
 
 /* Página de cadastro de paciente */
 
