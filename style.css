@@ -24,6 +24,7 @@
     --gray-color: #f0f4f9;
     --gray-ligth-1: #E8ECF1;
 
+    --azul-table: rgba(179, 186, 223, 0.521);
  }
  
 * {
@@ -438,6 +439,29 @@ hr {
 
 
 /* Página de pacientes (cadastrar_paciente.html) */
+.head-paciente {
+    width: 100%;
+    height: 20rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.info-paciente {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+}
+
+.info-paciente--espace {
+    margin-right: 1rem;
+}
+
+.info-margin-top {
+    margin-top: 3rem;
+}
+
 .separador {
     width: 150rem;
     display: flex;
@@ -453,7 +477,7 @@ hr {
 
 .btn-search {
     width: 100%;
-    height: 9rem;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -549,6 +573,7 @@ hr {
 
 .table-main thead {
     border-bottom: 1px solid lightgray;
+    background-color: rgba(63, 72, 114, 0.521);
 }
 
 .table-th--align td:nth-child(2) {
@@ -570,8 +595,8 @@ hr {
     max-height: 2.5rem;
 }
 
-.table--edit tr:hover{
-    background-color: rgba(179, 186, 223, 0.521);
+.table--hover tr:hover{
+    background-color: var(--azul-table);
 }
 
 .table--align {
