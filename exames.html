@@ -33,21 +33,21 @@
                     <div class="menu-menu--espacamento">
                         <li>
                             <i class="fa-solid fa-hospital-user"></i>
-                            <a href="cadastrar_paciente.html">Pacientes</a>
+                            <a href="lista_pacientes.html">Pacientes</a>
                         </li>
                     </div>
 
                     <div class="menu-menu--espacamento">
                         <li>
                             <i class="fa-solid fa-calendar-days"></i>
-                            <a href="#">Agenda</a>
+                            <a href="agenda.html">Agenda</a>
                         </li>
                     </div>
 
                     <div class="menu-menu--espacamento">
                         <li>
                             <i class="fa-solid fa-stethoscope"></i>
-                            <a href="#">Exames</a>
+                            <a href="exames.html">Exames</a>
                         </li>
                     </div>
 
@@ -72,7 +72,24 @@
     </section>
 
     <section>
-
+        <div class="dados-paciente">
+            <div>
+                <div>
+                    <h3>Dados do paciente</h3>
+                </div>
+                <div>
+                    <p>Nome: Maria Francisca</p>
+                    <p>CPF: 157.489.675-42</p>
+                    <p>CNS: 859715325660009</p>
+                    <p>Data de nascimento: 05/08/1999</p>
+                </div>
+                <div>
+                    <h4>Ultimos exames realizados</h4>
+                    <p>Ultrassonografia de Abdômen Total</p>
+                    <p>Tomografia Computadorizada de Abdômen Superior</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script>
@@ -84,7 +101,7 @@
 
         menuItems.forEach(item => {
             // Verificar se o link do item corresponde à URL atual
-            if (item.href === currentUrl) {
+            if (item.href.includes(currentUrl)) {
                 // Adicionar a classe 'active' ao item pai (li)
                 item.parentElement.classList.add('active');
             }

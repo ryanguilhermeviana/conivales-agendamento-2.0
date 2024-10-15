@@ -850,7 +850,7 @@ hr {
 .nav-pagination ul li {
     background-color: var(--white-color);
     text-align: center;
-    padding: .8rem 1.5rem;
+    padding: .4rem 1.1rem;
 }
 
 .nav-pagination ul li:not(:last-child) {
@@ -868,3 +868,13 @@ hr {
     justify-content: center;
 }
 
+
+/* exames.html */
+
+.dados-paciente {
+    margin: 1rem 2rem;
+    padding: 1rem;
+    background-color: var(--white-color);
+    border: 1px solid lightgray;
+    border-radius: 2rem;
+}
