@@ -111,8 +111,64 @@
                     </div>
 
                     <div class="btn-search--align">
-                        <div class="btn--icon">
-                            <a href=""><i class="fa-solid fa-filter"></i>Filtros</a>
+                        <div class="btn--icon dropdown">
+                            <a href="javascript:void(0)" class="dropbtn"><i class="fa-solid fa-filter"></i>Filtros</a>
+                            <div class="dropdown-content dropdown-border">
+                                <div class="dropdown-margin-bottom">
+                                    <h4>Classificação</h4>
+                                </div>
+                                <div class="dropdown-flex dropdown-margin-bottom-5">
+                                    <div class="dropdown-flex">
+                                        <div>
+                                            <input type="radio" name="classif" id="crescente" value="crescente">
+                                            <label for="crescente">Crescente</label>
+                                        </div>
+
+                                        <div>
+                                            <input type="radio" name="classif" id="descrescente" value="descrescente">
+                                            <label for="descrescente">Decrescente</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown-margin-bottom">
+                                    <h4>Município</h4>
+                                </div>
+
+                                <div>
+                                    <div class="dropdown-margin-bottom-5 width-select">
+                                        <select name="drop-municipio" id="drop-municipio" class="a3--edit width-select">
+                                            <option value="">Todos</option>
+                                            <option value="Amparo">Amparo do São Francisco</option>
+                                            <option value="">Telha</option>
+                                            <option value="">Pedrinhas</option>
+                                            <option value="">Lagarto</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown-margin-bottom-2">
+                                    <h4>Período</h4>
+                                </div>
+
+                                <div class="dropdown-data dropdown-margin-bottom-5">
+                                    <div>
+                                        <label for="data_inicial">Data inicial:</label>
+                                        <input type="date" id="data_inicial" name="data_incial"
+                                            class="dropdown-label-margin border-date">
+                                    </div>
+                                    <div>
+                                        <label for="data_final" class="dropdown-label-margin">Data final:</label>
+                                        <input type="date" id="data_final" name="data_final"
+                                            class="dropdown-label-margin border-date">
+                                    </div>
+                                </div>
+
+                                <div class="dropdown-data dropdown-data-button">
+                                    <button class="close-dropdown-btn dropdown-btn">Aplicar</button>
+                                    <button class="clear-filters-btn dropdown-btn">Limpar</button>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="btn--icon">
@@ -120,7 +176,19 @@
                         </div>
 
                         <div class="btn--icon">
-                            <a href=""><i class="fa-solid fa-cloud-arrow-down"></i>Download</a>
+                            <a href="javascript:void(0)" class="dropbtn-download"><i
+                                    class="fa-solid fa-cloud-arrow-down"></i>Download</a>
+                            <div class="dropdown-content-2 dropdown-border download-content">
+                                <div class="teste">
+                                    <div class="teste-2 i-margin">
+                                        <a href=""><i class="fa-regular fa-file-excel"></i>EXCEL</a>
+                                    </div>
+
+                                    <div class="teste-2 i-color">
+                                        <a href=""><i class="fa-regular fa-file-pdf"></i>PDF</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,103 +219,227 @@
                             <td>05/08/1999</td>
                             <td>1</td>
                             <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
-                                        title="Adiconar exames"></a></i>
-                            </td>
+                                        title="Adicionar exames"></a></i></td>
                             <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
                                         title="Editar paciente"></i></a></td>
                             <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
                                         title="Excluir cadastro"></i></a></td>
                         </tr>
-
                         <tr class="table-th--align">
-                            <td>1</td>
-                            <td>Maria Francisca</td>
-                            <td>Amparo do São Francisco</td>
-                            <td>157.489.675-42</td>
-                            <td>859715325660009</td>
-                            <td>05/08/1999</td>
+                            <td>2</td>
+                            <td>João Silva</td>
+                            <td>Lagarto</td>
+                            <td>123.456.789-01</td>
+                            <td>123456789012345</td>
+                            <td>10/01/1985</td>
+                            <td>2</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>3</td>
+                            <td>Roberta Souza</td>
+                            <td>Pedrinhas</td>
+                            <td>987.654.321-00</td>
+                            <td>789654123987654</td>
+                            <td>25/12/1990</td>
+                            <td>0</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>4</td>
+                            <td>Carlos Oliveira</td>
+                            <td>Telha</td>
+                            <td>456.789.123-99</td>
+                            <td>654321789654321</td>
+                            <td>15/03/1975</td>
+                            <td>3</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>5</td>
+                            <td>Fernanda Lima</td>
+                            <td>Nossa Senhora de Lourdes</td>
+                            <td>789.123.456-78</td>
+                            <td>321654987321654</td>
+                            <td>30/07/2001</td>
                             <td>1</td>
                             <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
-                                        title="Adiconar exames"></a></i>
-                            </td>
+                                        title="Adicionar exames"></a></i></td>
                             <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
                                         title="Editar paciente"></i></a></td>
                             <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
                                         title="Excluir cadastro"></i></a></td>
                         </tr>
-
                         <tr class="table-th--align">
-                            <td>1</td>
-                            <td>Maria Francisca</td>
+                            <td>6</td>
+                            <td>Lucas Pereira</td>
+                            <td>Pacatuba</td>
+                            <td>111.222.333-44</td>
+                            <td>789123456789123</td>
+                            <td>18/11/1994</td>
+                            <td>5</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>7</td>
+                            <td>Ana Costa</td>
+                            <td>Carmópolis</td>
+                            <td>444.555.666-77</td>
+                            <td>456789123456789</td>
+                            <td>09/09/1988</td>
+                            <td>0</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>8</td>
+                            <td>Pedro Andrade</td>
+                            <td>Itabi</td>
+                            <td>888.999.000-11</td>
+                            <td>123789456123789</td>
+                            <td>12/04/1979</td>
+                            <td>4</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>9</td>
+                            <td>Juliana Melo</td>
+                            <td>Riachuelo</td>
+                            <td>159.357.486-20</td>
+                            <td>789321654789321</td>
+                            <td>22/05/2002</td>
+                            <td>2</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>10</td>
+                            <td>Marcos Tavares</td>
+                            <td>Nossa Senhora de Lourdes</td>
+                            <td>321.654.987-21</td>
+                            <td>654987321654987</td>
+                            <td>07/07/1996</td>
+                            <td>3</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>11</td>
+                            <td>Sofia Rocha</td>
+                            <td>Santa Rosa de Lima</td>
+                            <td>789.456.123-65</td>
+                            <td>852741963852741</td>
+                            <td>14/02/1991</td>
+                            <td>0</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>12</td>
+                            <td>Diego Santos</td>
                             <td>Amparo do São Francisco</td>
-                            <td>157.489.675-42</td>
-                            <td>859715325660009</td>
-                            <td>05/08/1999</td>
+                            <td>963.852.741-32</td>
+                            <td>753951852753951</td>
+                            <td>23/09/1993</td>
+                            <td>6</td>
+                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
+                                        title="Adicionar exames"></a></i></td>
+                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
+                                        title="Editar paciente"></i></a></td>
+                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
+                                        title="Excluir cadastro"></i></a></td>
+                        </tr>
+                        <tr class="table-th--align">
+                            <td>13</td>
+                            <td>Paula Dias</td>
+                            <td>Lagarto</td>
+                            <td>456.321.789-99</td>
+                            <td>159357159357159</td>
+                            <td>17/11/2000</td>
                             <td>1</td>
                             <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
-                                        title="Adiconar exames"></a></i>
-                            </td>
+                                        title="Adicionar exames"></a></i></td>
                             <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
                                         title="Editar paciente"></i></a></td>
                             <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
                                         title="Excluir cadastro"></i></a></td>
                         </tr>
-
                         <tr class="table-th--align">
-                            <td>1</td>
-                            <td>Maria Francisca</td>
-                            <td>Amparo do São Francisco</td>
-                            <td>157.489.675-42</td>
-                            <td>859715325660009</td>
-                            <td>05/08/1999</td>
-                            <td>1</td>
+                            <td>14</td>
+                            <td>Gabriel Freitas</td>
+                            <td>Pedrinhas</td>
+                            <td>951.753.852-46</td>
+                            <td>789456789456789</td>
+                            <td>02/10/1998</td>
+                            <td>4</td>
                             <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
-                                        title="Adiconar exames"></a></i>
-                            </td>
+                                        title="Adicionar exames"></a></i></td>
                             <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
                                         title="Editar paciente"></i></a></td>
                             <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
                                         title="Excluir cadastro"></i></a></td>
                         </tr>
-
-                        <tr class="table-th--align">
-                            <td>1</td>
-                            <td>Maria Francisca</td>
-                            <td>Amparo do São Francisco</td>
-                            <td>157.489.675-42</td>
-                            <td>859715325660009</td>
-                            <td>05/08/1999</td>
-                            <td>1</td>
-                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
-                                        title="Adiconar exames"></a></i>
-                            </td>
-                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
-                                        title="Editar paciente"></i></a></td>
-                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
-                                        title="Excluir cadastro"></i></a></td>
-                        </tr>
-
-                        <tr class="table-th--align">
-                            <td>1</td>
-                            <td>Maria Francisca</td>
-                            <td>Amparo do São Francisco</td>
-                            <td>157.489.675-42</td>
-                            <td>859715325660009</td>
-                            <td>05/08/1999</td>
-                            <td>1</td>
-                            <td><a href=""><i class="fa-solid fa-notes-medical icone-azul"
-                                        title="Adiconar exames"></a></i>
-                            </td>
-                            <td><a href=""><i class="fa-solid fa-pen-to-square" style="color: #229b36;"
-                                        title="Editar paciente"></i></a></td>
-                            <td><a href=""><i class="fa-solid fa-trash-can" style="color: #cb1515;"
-                                        title="Excluir cadastro"></i></a></td>
-                        </tr>
-
                     </tbody>
 
                 </table>
             </div>
+
+            <nav aria-label="..." class="nav-pagination">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only">(atual)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Próximo</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </section>
 
@@ -265,6 +457,105 @@
                 item.parentElement.classList.add('active');
             }
         });
+
+        // // Função para alternar o dropdown
+        // document.querySelector('.dropbtn').addEventListener('click', function () {
+        //     var dropdown = document.querySelector('.dropdown-content');
+        //     dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+        //     dropdown.style.flexDirection = 'column';  // Garante que os itens fiquem em coluna
+        // });
+
+        // // Função para fechar o dropdown ao clicar fora, exceto quando clicar nos checkboxes ou no dropdown
+        // window.onclick = function (event) {
+        //     var dropdown = document.querySelector('.dropdown-content');
+
+        //     // Se o clique não foi no botão de filtros, no conteúdo do dropdown ou em um checkbox
+        //     if (!event.target.matches('.dropbtn') &&
+        //         !event.target.closest('.dropdown-content') &&
+        //         !event.target.matches('.dropdown-checkbox')) {
+        //         dropdown.style.display = 'none';
+        //     }
+        // };
+
+        // // Fechar o dropdown ao clicar no botão "Fechar Menu"
+        // document.querySelector('.close-dropdown-btn').addEventListener('click', function () {
+        //     var dropdown = document.querySelector('.dropdown-content');
+        //     dropdown.style.display = 'none';
+        // });
+
+        // // Função para limpar todos os filtros
+        // document.querySelector('.clear-filters-btn').addEventListener('click', function () {
+        //     // Desmarca os inputs de radio
+        //     var radios = document.querySelectorAll('input[name="classif"]');
+        //     radios.forEach(function (radio) {
+        //         radio.checked = false;
+        //     });
+
+        //     // Reseta o campo select de município
+        //     document.querySelector('#drop-municipio').selectedIndex = 0;
+
+        //     // Limpa as datas
+        //     document.querySelector('#data_inicial').value = '';
+        //     document.querySelector('#data_final').value = '';
+        // });
+
+
+        // Função para alternar o dropdown de filtros
+        document.querySelector('.dropbtn').addEventListener('click', function () {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+            dropdown.style.flexDirection = 'column';  // Garante que os itens fiquem em coluna
+        });
+
+        // Função para alternar o dropdown de download
+        document.querySelector('.dropbtn-download').addEventListener('click', function () {
+            var downloadDropdown = document.querySelector('.download-content');
+            downloadDropdown.style.display = downloadDropdown.style.display === 'flex' ? 'none' : 'flex';
+            downloadDropdown.style.flexDirection = 'row';
+        });
+
+        // Função para fechar os dropdowns ao clicar fora, exceto quando clicar nos checkboxes, no dropdown ou no menu de download
+        window.onclick = function (event) {
+            var dropdown = document.querySelector('.dropdown-content');
+            var downloadDropdown = document.querySelector('.download-content');
+
+            // Fechar dropdown de filtros se o clique não for no botão de filtros ou no conteúdo do dropdown
+            if (!event.target.matches('.dropbtn') &&
+                !event.target.closest('.dropdown-content') &&
+                !event.target.matches('.dropdown-checkbox')) {
+                dropdown.style.display = 'none';
+            }
+
+            // Fechar dropdown de download se o clique não for no botão de download ou no conteúdo do download
+            if (!event.target.matches('.dropbtn-download') &&
+                !event.target.closest('.download-content')) {
+                downloadDropdown.style.display = 'none';
+            }
+        };
+
+        // Fechar o dropdown de filtros ao clicar no botão "Fechar Menu"
+        document.querySelector('.close-dropdown-btn').addEventListener('click', function () {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = 'none';
+        });
+
+        // Função para limpar todos os filtros
+        document.querySelector('.clear-filters-btn').addEventListener('click', function () {
+            // Desmarca os inputs de radio
+            var radios = document.querySelectorAll('input[name="classif"]');
+            radios.forEach(function (radio) {
+                radio.checked = false;
+            });
+
+            // Reseta o campo select de município
+            document.querySelector('#drop-municipio').selectedIndex = 0;
+
+            // Limpa as datas
+            document.querySelector('#data_inicial').value = '';
+            document.querySelector('#data_final').value = '';
+        });
+
+
     </script>
 
 </html>

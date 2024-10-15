@@ -496,7 +496,6 @@ hr {
     font-size: 2.8rem;
 }
 
-
 .btn--icon {
     display: flex;
     align-items: center;
@@ -507,10 +506,156 @@ hr {
     padding: 0.8rem .8rem 0.8rem .4rem; 
     font-size: 1.5rem;
     margin: 0rem .3rem ;
+
+    /* edições */
+    position: relative;
 }
+
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--white-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 115%; /* Exibe logo abaixo do botão */
+    left: -150%;
+    border-radius: 1rem;
+    overflow: hidden;
+    color: black;
+    padding: 1rem;
+}
+
+.dropdown-content-2 {
+    display: none;
+    position: absolute;
+    background-color: var(--white-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 115%; /* Exibe logo abaixo do botão */
+    left: -50%;
+    border-radius: 1rem;
+    overflow: hidden;
+    color: black;
+    padding: 1rem; 
+}
+
+.dropdown-border {
+    border: 1px solid lightgray;
+}
+
+.dropdown-content input,
+.dropdown-content label,
+.dropdown-content select,
+.dropdown-content option,
+.dropdown-content button {
+    font-size: 1.6rem;
+}
+
+.dropdown-content h4 {
+    font-size: 1.8rem;
+}
+
+
+.dropdown-flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.dropdown-data {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown-margin-bottom {
+    margin-bottom: 0.8rem;
+}
+
+.dropdown-margin-bottom-5 {
+    margin-bottom: 2rem;
+}
+
+.dropdown-margin-bottom-2 {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-label-margin {
+    margin-top: .5rem;
+}
+
+.dropdown-data-button {
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.dropdown-btn {
+    border: 1px solid var(--conivales-blue-light-1);
+    border-radius: 2rem;
+    background-color: var(--conivales-blue-light-1);
+    color: white;
+    padding: 0.5rem 0.7rem; 
+    width: 9rem;
+}
+
+.a3--edit {
+    padding: 0.3rem 0.6rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    border-color: lightgray;
+}
+
+.border-date {
+    padding: 0.3rem 0.6rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    border-color: lightgray;
+    outline: none;
+}
+
+.width-select {
+    width: 100%;
+}
+
+
+/* */ 
 
 .btn--icon i {
     font-size: 1.8rem;
+}
+
+.teste {
+    width: 100%;
+}
+
+.teste-2 {
+    margin: 0rem 2.5rem;
+}
+
+.i-margin {
+    margin-bottom: 1rem;
+}
+
+.i-margin i {
+    color: rgb(30, 165, 30);
+    margin-right: .5rem;
+}
+
+.i-color i {
+    color: rgb(190, 39, 39);
+    margin-right: .5rem;
+}
+
+.teste i {
+    font-size: 2rem;
 }
 
 .btn-pesquisar-icon {
@@ -684,3 +829,42 @@ hr {
     padding: 0.8rem 1.6rem;
     text-align: center;
 }
+
+/* Paginação */
+.nav-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    color: var(--conivales-blue-light-1);
+    border: 2px solid lightgray;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.nav-pagination ul li {
+    background-color: var(--white-color);
+    text-align: center;
+    padding: .8rem 1.5rem;
+}
+
+.nav-pagination ul li:not(:last-child) {
+    border-right: 2px solid lightgray;
+}
+
+.nav-pagination ul li:nth-child(2) {
+    background-color: var(--conivales-blue-primary);
+    color: white;
+    border: 2px solid var(--conivales-blue-primary);
+}
+
+.page-item {
+    display: flex;
+    justify-content: center;
+}
+
