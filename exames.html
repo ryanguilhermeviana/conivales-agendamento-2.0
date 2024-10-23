@@ -40,7 +40,7 @@
                     <div class="menu-menu--espacamento">
                         <li>
                             <i class="fa-solid fa-calendar-days"></i>
-                            <a href="agenda.html">Agenda</a>
+                            <a href="%">Agenda</a>
                         </li>
                     </div>
 
@@ -71,24 +71,310 @@
         </nav>
     </section>
 
-    <section>
-        <div class="dados-paciente">
-            <div>
-                <div>
-                    <h3>Dados do paciente</h3>
+    <section class="main-exames">
+        <div class="main-exames--titulo">
+            <h2>Exames</h2>
+        </div>
+        <div class="nav-main">
+            <div class="btn-search nav-center">
+                <div class="btn-pesquisar-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" name="q" id="" placeholder="Pesquisar">
                 </div>
-                <div>
-                    <p>Nome: Maria Francisca</p>
-                    <p>CPF: 157.489.675-42</p>
-                    <p>CNS: 859715325660009</p>
-                    <p>Data de nascimento: 05/08/1999</p>
-                </div>
-                <div>
-                    <h4>Ultimos exames realizados</h4>
-                    <p>Ultrassonografia de Abdômen Total</p>
-                    <p>Tomografia Computadorizada de Abdômen Superior</p>
+
+                <div class="btn-search--align">
+                    <!-- <div class="btn--icon">
+                        <a href="formulario_cadastro.html"><i class="fa-solid fa-user-pen"></i>Editar</a>
+                    </div> -->
+                    <div class="btn--icon dropdown">
+                        <a href="javascript:void(0)" class="dropbtn"><i class="fa-solid fa-filter"></i>Filtros</a>
+                        <div class="dropdown-content dropdown-border">
+                            <div class="dropdown-margin-bottom">
+                                <h4>Classificação</h4>
+                            </div>
+                            <div class="dropdown-flex dropdown-margin-bottom-5">
+                                <div class="dropdown-flex">
+                                    <div>
+                                        <input type="radio" name="classif" id="crescente" value="crescente">
+                                        <label for="crescente">Crescente</label>
+                                    </div>
+
+                                    <div>
+                                        <input type="radio" name="classif" id="descrescente" value="descrescente">
+                                        <label for="descrescente">Decrescente</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-margin-bottom">
+                                <h4>Município</h4>
+                            </div>
+
+                            <div>
+                                <div class="dropdown-margin-bottom-5 width-select">
+                                    <select name="drop-municipio" id="drop-municipio" class="a3--edit width-select">
+                                        <option value="">Todos</option>
+                                        <option value="Amparo">Amparo do São Francisco</option>
+                                        <option value="">Telha</option>
+                                        <option value="">Pedrinhas</option>
+                                        <option value="">Lagarto</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-margin-bottom-2">
+                                <h4>Período</h4>
+                            </div>
+
+                            <div class="dropdown-data dropdown-margin-bottom-5">
+                                <div>
+                                    <label for="data_inicial">Data inicial:</label>
+                                    <input type="date" id="data_inicial" name="data_incial"
+                                        class="dropdown-label-margin border-date">
+                                </div>
+                                <div>
+                                    <label for="data_final" class="dropdown-label-margin">Data final:</label>
+                                    <input type="date" id="data_final" name="data_final"
+                                        class="dropdown-label-margin border-date">
+                                </div>
+                            </div>
+
+                            <div class="dropdown-data dropdown-data-button">
+                                <button class="close-dropdown-btn dropdown-btn">Aplicar</button>
+                                <button class="clear-filters-btn dropdown-btn">Limpar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn--icon">
+                        <a href="javascript:void(0)" class="dropbtn-download"><i
+                                class="fa-solid fa-cloud-arrow-down"></i>Download</a>
+                        <div class="dropdown-content-2 dropdown-border download-content">
+                            <div class="teste">
+                                <div class="teste-2 i-margin">
+                                    <a href=""><i class="fa-regular fa-file-excel"></i>EXCEL</a>
+                                </div>
+
+                                <div class="teste-2 i-color">
+                                    <a href=""><i class="fa-regular fa-file-pdf"></i>PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="table-espace">
+            <table class="table-main table-main-2">
+                <thead class="table--edit">
+                    <tr class="table--align">
+                        <th></th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>CNS</th>
+                        <th>Exame</th>
+                        <th>Data</th>
+                        <th colspan="2">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody class="table--edit table--hover">
+                    <tr class="table-th--align">
+                        <td>1</td>
+                        <td>Maria Francisca</td>
+                        <td>157.489.675-42</td>
+                        <td>859715325660009</td>
+                        <td>Radiografia de Abdômen (ap + Lateral / Localizada)</td>
+                        <td><input type="date" name="teste" id="teste" class="exame-data" min="2024-10-22"></td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>2</td>
+                        <td>Maria Francisca</td>
+                        <td>157.489.675-42</td>
+                        <td>859715325660009</td>
+                        <td>Ultrassonografia de Articulação</td>
+                        <td><input type="date" name="teste" id="teste" class="exame-data"></td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>3</td>
+                        <td>Maria Francisca</td>
+                        <td>157.489.675-42</td>
+                        <td>859715325660009</td>
+                        <td>Ressonância Magnética de Membro Inferior (Unilateral)</td>
+                        <td><input type="date" name="teste" id="teste" class="exame-data"></td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>4</td>
+                        <td>João Silva</td>
+                        <td>123.456.789-01</td>
+                        <td>123456789012345</td>
+                        <td>Radiografia de Bacia</td>
+                        <td><input type="date" name="teste" id="teste" class="exame-data"></td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>5</td>
+                        <td>Roberta Souza</td>
+                        <td>987.654.321-00</td>
+                        <td>789654123987654</td>
+                        <td>Ultrassonografia de Tireoide</td>
+                        <td><input type="date" name="teste" id="teste" class="exame-data"></td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>6</td>
+                        <td>Carlos Oliveira</td>
+                        <td>456.789.123-99</td>
+                        <td>654321789654321</td>
+                        <td>Tomografia Computadorizada de Coluna Lombosacra sem Contraste</td>
+                        <td><input type="date" name="teste" id="teste" class="exame-data"></td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>7</td>
+                        <td>Fernanda Lima</td>
+                        <td>789.123.456-78</td>
+                        <td>321654987321654</td>
+                        <td>Ressonância Magnética de Vias Biliares</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>8</td>
+                        <td>Lucas Pereira</td>
+                        <td>111.222.333-44</td>
+                        <td>789123456789123</td>
+                        <td>Radiografia de Esôfago</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>9</td>
+                        <td>Ana Costa</td>
+                        <td>444.555.666-77</td>
+                        <td>456789123456789</td>
+                        <td>Ultrassonografia Transvaginal</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>10</td>
+                        <td>Pedro Andrade</td>
+                        <td>888.999.000-11</td>
+                        <td>123789456123789</td>
+                        <td>Tomografia Computadorizada de Abdômen Superior com Contraste</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>11</td>
+                        <td>Juliana Melo</td>
+                        <td>159.357.486-20</td>
+                        <td>789321654789321</td>
+                        <td>Ressonância Magnética de Crânio</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>12</td>
+                        <td>Marcos Tavares</td>
+                        <td>321.654.987-21</td>
+                        <td>654987321654987</td>
+                        <td>Ressonância Magnética de Sela Túrcica</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>13</td>
+                        <td>Sofia Rocha</td>
+                        <td>789.456.123-65</td>
+                        <td>852741963852741</td>
+                        <td>Tomografia Computadorizada de Coluna Cervical sem Contraste</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>14</td>
+                        <td>Diego Santos</td>
+                        <td>963.852.741-32</td>
+                        <td>753951852753951</td>
+                        <td>Ultrassonografia de Próstata (via Transretal)</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>15</td>
+                        <td>Paula Dias</td>
+                        <td>456.321.789-99</td>
+                        <td>159357159357159</td>
+                        <td>Radiografia de Coração E Vasos Da Base (pa + Lateral + Obliqua)</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                    <tr class="table-th--align">
+                        <td>16</td>
+                        <td>Gabriel Freitas</td>
+                        <td>951.753.852-46</td>
+                        <td>789456789456789</td>
+                        <td>Tomografia Computadorizada de Articulações de Membro Inferior 2 com Contraste</td>
+                        <td>15/03/2024</td>
+                        <td><a href="exames.html" title="Informações do paciente"><i
+                                    class="fa-solid fa-user icone-azul icone-exames"></i></a></td>
+                        <td><a href=""><i class="fa-solid fa-calendar-check icone-exames" style="color: #229b36;"
+                                    title="Confirmar data"></i></a></td>
+                    </tr>
+                </tbody>
+
+            </table>
         </div>
     </section>
 
@@ -105,6 +391,61 @@
                 // Adicionar a classe 'active' ao item pai (li)
                 item.parentElement.classList.add('active');
             }
+        });
+
+        // Função para alternar o dropdown de filtros
+        document.querySelector('.dropbtn').addEventListener('click', function () {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+            dropdown.style.flexDirection = 'column';  // Garante que os itens fiquem em coluna
+        });
+
+        // Função para alternar o dropdown de download
+        document.querySelector('.dropbtn-download').addEventListener('click', function () {
+            var downloadDropdown = document.querySelector('.download-content');
+            downloadDropdown.style.display = downloadDropdown.style.display === 'flex' ? 'none' : 'flex';
+            downloadDropdown.style.flexDirection = 'row';
+        });
+
+        // Função para fechar os dropdowns ao clicar fora, exceto quando clicar nos checkboxes, no dropdown ou no menu de download
+        window.onclick = function (event) {
+            var dropdown = document.querySelector('.dropdown-content');
+            var downloadDropdown = document.querySelector('.download-content');
+
+            // Fechar dropdown de filtros se o clique não for no botão de filtros ou no conteúdo do dropdown
+            if (!event.target.matches('.dropbtn') &&
+                !event.target.closest('.dropdown-content') &&
+                !event.target.matches('.dropdown-checkbox')) {
+                dropdown.style.display = 'none';
+            }
+
+            // Fechar dropdown de download se o clique não for no botão de download ou no conteúdo do download
+            if (!event.target.matches('.dropbtn-download') &&
+                !event.target.closest('.download-content')) {
+                downloadDropdown.style.display = 'none';
+            }
+        };
+
+        // Fechar o dropdown de filtros ao clicar no botão "Fechar Menu"
+        document.querySelector('.close-dropdown-btn').addEventListener('click', function () {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = 'none';
+        });
+
+        // Função para limpar todos os filtros
+        document.querySelector('.clear-filters-btn').addEventListener('click', function () {
+            // Desmarca os inputs de radio
+            var radios = document.querySelectorAll('input[name="classif"]');
+            radios.forEach(function (radio) {
+                radio.checked = false;
+            });
+
+            // Reseta o campo select de município
+            document.querySelector('#drop-municipio').selectedIndex = 0;
+
+            // Limpa as datas
+            document.querySelector('#data_inicial').value = '';
+            document.querySelector('#data_final').value = '';
         });
     </script>
 </body>
