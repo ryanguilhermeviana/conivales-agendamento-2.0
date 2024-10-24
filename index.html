@@ -47,16 +47,18 @@
         </div>
 
     </section>
+    <script>
+        function isMobileDevice() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        if (isMobileDevice()) {
+            document.getElementById('popup').style.display = 'block';
+        }
+    </script>
+
 </body>
 
-<script>
-    function isMobileDevice() {
-        return /Mobi|Android/i.test(navigator.userAgent);
-    }
 
-    if (isMobileDevice()) {
-        document.getElementById('popup').style.display = 'block';
-    }
-</script>
 
 </html>
