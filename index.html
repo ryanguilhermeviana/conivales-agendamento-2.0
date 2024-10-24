@@ -40,7 +40,23 @@
                 </form>
             </div>
         </div>
+
+        <div id="popup">
+            <h2>Esta página só pode ser acessada em um computador!</h2>
+            <p>Por favor, abra esta página em um dispositivo de desktop.</p>
+        </div>
+
     </section>
 </body>
+
+<script>
+    function isMobileDevice() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
+
+    if (isMobileDevice()) {
+        document.getElementById('popup').style.display = 'block';
+    }
+</script>
 
 </html>
