@@ -1127,7 +1127,7 @@ tr td a .icone-exames {
     justify-content: space-between;
 }
 
-.popup {
+#popup {
     display: none;
     position: fixed;
     top: 0;
