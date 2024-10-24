@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="main-margin main-grid">
+    <section class="bk-gray">
+        <nav class="menu-nav">
+            <div class="menu-logo">
+                <div class="menu-logo-img">
+                    <img src="./img/logo_transp.png" alt="Logo do Conivales" class="menu-img">
+                </div>
+                <h1>CONIVALES</h1>
+            </div>
+            <div class="menu-menu">
+                <ul>
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-chart-line"></i>
+                            <a href="index.html">Dashboard</a>
+                        </li>
+                    </div>
+
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-hospital-user"></i>
+                            <a href="lista_pacientes.html">Pacientes</a>
+                        </li>
+                    </div>
+
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <a href="%">Agenda</a>
+                        </li>
+                    </div>
+
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-stethoscope"></i>
+                            <a href="exames.html">Exames</a>
+                        </li>
+                    </div>
+
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <a href="login.html">Logout</a>
+                        </li>
+                    </div>
+
+                </ul>
+            </div>
+            <div class="menu-user">
+                <div>
+                    <img src="./img/user.svg" alt="" width="40" height="40" class="menu-user-border">
+                </div>
+                <h4>Ryan Guilherme</h4>
+                <p>email@email.com</p>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <div class="info-container">
+            <div class="info-titulo">
+                <h3 class="info-container-titulo">Informações do paciente</h3>
+                <div class="btn--icon">
+                    <a href="javascript:void(0)" class="dropbtn-download"><i
+                            class="fa-solid fa-cloud-arrow-down"></i>Download</a>
+                    <div class="dropdown-content-2 dropdown-border download-content">
+                        <div class="teste">
+                            <div class="teste-2 i-margin">
+                                <a href=""><i class="fa-regular fa-file-excel"></i>EXCEL</a>
+                            </div>
+
+                            <div class="teste-2 i-color">
+                                <a href=""><i class="fa-regular fa-file-pdf"></i>PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>Dados</h3>
+                    <form action="" method="post" class="editar-paciente">
+                        <div class="editar--b ">
+                            <div class="editar--c editar--d">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" id="nome" value="Maria Francisca">
+                            </div>
+                        </div>
+
+                        <div class="editar--b">
+                            <div class="editar--c editar--e">
+                                <label for="data-info">Data de nascimento:</label>
+                                <input type="date" name="data-info" id="data-info" value="1999-08-05">
+                            </div>
+
+                            <div class="editar--c editar--e">
+                                <label for="municipio">Município:</label>
+                                <select name="municipio" id="">
+                                    <option value="1">Amparo do São Francisco</option>
+                                    <option value="2">Boquim</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="editar--b">
+                            <div class="editar--c editar--e">
+                                <label for="cpf-info">CPF:</label>
+                                <input type="text" name="cpf-info" id="cpf-info" value="157.489.675-42">
+                            </div>
+
+                            <div class="editar--c editar--e">
+                                <label for="cns-info">CNS:</label>
+                                <input type="text" name="cns-info" id="cns-info" value="859715325660009">
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="editar-button--container">
+                        <button class="editar-button">Salvar</button>
+                    </div>
+                </div>
+
+                <div class="editar-documentos">
+                    <h3>Documentos</h3>
+                    <div class="editar-documentos--c">
+                        <div class="editar-documentos--a">
+                            <div class="editar-documentos--b">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <p>rg_frente_verso.pdf</p>
+                            </div>
+                            <div class="editar-documentos--b">
+                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="editar-documentos--a">
+                            <div class="editar-documentos--b">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <p>comprovante_de_residencia.pdf</p>
+                            </div>
+                            <div class="editar-documentos--b">
+                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="editar-documentos--a">
+                            <div class="editar-documentos--b">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <p>encaminhamento.jpg</p>
+                            </div>
+                            <div class="editar-documentos--b">
+                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <div class="editar-documentos--a">
+                            <div class="editar-documentos--b">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <p>qualquer_um.png</p>
+                            </div>
+                            <div class="editar-documentos--b">
+                                <i class="fa-solid fa-cloud-arrow-down"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+                        <hr>
+
+                    </div>
+                    <div class="editar-button--container button-documentos">
+                        <button class="editar-button">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="exames-container">
+                <div class="exames-nav">
+                    <h3 class="info-container-titulo">Exames</h3>
+                    <div class="btn-search--align">
+                        <div class="btn--icon dropdown">
+                            <a href="javascript:void(0)" class="dropbtn"><i class="fa-solid fa-filter"></i>Filtros</a>
+                            <div class="dropdown-content dropdown-teste dropdown-border">
+                                <div class="dropdown-margin-bottom">
+                                    <h4>Classificação</h4>
+                                </div>
+                                <div class="dropdown-flex dropdown-margin-bottom-5">
+                                    <div class="dropdown-flex">
+                                        <div>
+                                            <input type="radio" name="classif" id="crescente" value="crescente">
+                                            <label for="crescente">Crescente</label>
+                                        </div>
+
+                                        <div>
+                                            <input type="radio" name="classif" id="descrescente" value="descrescente">
+                                            <label for="descrescente">Decrescente</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown-margin-bottom">
+                                    <h4>Categoria</h4>
+                                </div>
+
+                                <div>
+                                    <div class="dropdown-margin-bottom-5 width-select">
+                                        <select name="drop-municipio" id="drop-municipio" class="a3--edit width-select">
+                                            <option value="">Todos</option>
+                                            <option value="Amparo">Ressonância</option>
+                                            <option value="">Tomografia</option>
+                                            <option value="">Ultrassonografia</option>
+                                            <option value="">Radiografia</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown-margin-bottom-2">
+                                    <h4>Período</h4>
+                                </div>
+
+                                <div class="dropdown-data dropdown-margin-bottom-5">
+                                    <div>
+                                        <label for="data_inicial">Data inicial:</label>
+                                        <input type="date" id="data_inicial" name="data_incial"
+                                            class="dropdown-label-margin border-date">
+                                    </div>
+                                    <div>
+                                        <label for="data_final" class="dropdown-label-margin">Data final:</label>
+                                        <input type="date" id="data_final" name="data_final"
+                                            class="dropdown-label-margin border-date">
+                                    </div>
+                                </div>
+
+                                <div class="dropdown-data dropdown-data-button">
+                                    <button class="close-dropdown-btn dropdown-btn">Aplicar</button>
+                                    <button class="clear-filters-btn dropdown-btn">Limpar</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="table-espace">
+                    <table class="table-main table-exames">
+                        <thead class="table--edit">
+                            <tr class="table--align">
+                                <th></th>
+                                <th>Categoria</th>
+                                <th>Procedimento</th>
+                                <th>Solicitado</th>
+                                <th>Realizado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table--edit table--hover">
+                            <tr class="table-th--align">
+                                <td>1</td>
+                                <td>Ressonância</td>
+                                <td>Ressonância Magnética de Abdomên Superior</td>
+                                <td>01 / 05 / 2024</td>
+                                <td>22 / 10 / 2024</td>
+                            </tr>
+                            <tr class="table-th--align">
+                                <td>2</td>
+                                <td>Ultrassonografia</td>
+                                <td>Ultrassonografia de Abdômen Total</td>
+                                <td>10 / 06 / 2024</td>
+                                <td>15 / 09 / 2024</td>
+                            </tr>
+                            <tr class="table-th--align">
+                                <td>3</td>
+                                <td>Tomografia</td>
+                                <td>Tomografia computadorizada de Abdômen Superior</td>
+                                <td>17 / 04 / 2024</td>
+                                <td>30 / 07 / 2024</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+        const currentUrl = window.location.href;
+        const menuItems = document.querySelectorAll('.menu-menu ul li a');
+
+        menuItems.forEach(item => {
+            if (item.href.includes(currentUrl)) {
+                item.parentElement.classList.add('active');
+            }
+        });
+
+        document.querySelector('.dropbtn').addEventListener('click', function () {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+            dropdown.style.flexDirection = 'column';
+        });
+
+        document.querySelector('.dropbtn-download').addEventListener('click', function () {
+            var downloadDropdown = document.querySelector('.download-content');
+            downloadDropdown.style.display = downloadDropdown.style.display === 'flex' ? 'none' : 'flex';
+            downloadDropdown.style.flexDirection = 'row';
+        });
+
+        window.onclick = function (event) {
+            var dropdown = document.querySelector('.dropdown-content');
+            var downloadDropdown = document.querySelector('.download-content');
+
+            if (!event.target.matches('.dropbtn') &&
+                !event.target.closest('.dropdown-content') &&
+                !event.target.matches('.dropdown-checkbox')) {
+                dropdown.style.display = 'none';
+            }
+
+            if (!event.target.matches('.dropbtn-download') &&
+                !event.target.closest('.download-content')) {
+                downloadDropdown.style.display = 'none';
+            }
+        };
+
+        document.querySelector('.close-dropdown-btn').addEventListener('click', function () {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = 'none';
+        });
+
+        document.querySelector('.clear-filters-btn').addEventListener('click', function () {
+            var radios = document.querySelectorAll('input[name="classif"]');
+            radios.forEach(function (radio) {
+                radio.checked = false;
+            });
+            document.querySelector('#drop-municipio').selectedIndex = 0;
+            document.querySelector('#data_inicial').value = '';
+            document.querySelector('#data_final').value = '';
+        });
+    </script>
+</body>
