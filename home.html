@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Conivales</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="main-margin main-grid">
+    <section class="bk-gray">
+        <nav class="menu-nav">
+            <div class="menu-logo">
+                <div class="menu-logo-img">
+                    <img src="./img/logo_transp.png" alt="Logo do Conivales" class="menu-img">
+                </div>
+                <h1>CONIVALES</h1>
+            </div>
+            <div class="menu-menu">
+                <ul>
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-chart-line"></i>
+                            <a href="home.html">Dashboard</a>
+                        </li>
+                    </div>
+
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-hospital-user"></i>
+                            <a href="lista_pacientes.html">Pacientes</a>
+                        </li>
+                    </div>
+
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <a href="#">Agenda</a>
+                        </li>
+                    </div>
+
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-stethoscope"></i>
+                            <a href="exames.html">Exames</a>
+                        </li>
+                    </div>
+
+                    <div class="menu-menu--espacamento">
+                        <li>
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <a href="index.html">Logout</a>
+                        </li>
+                    </div>
+
+                </ul>
+            </div>
+            <div class="menu-user">
+                <!-- <img width="32" height="32" src="https://img.icons8.com/puffy-filled/32/user.png" alt="user" /> -->
+                <div>
+                    <img src="./img/user.svg" alt="" width="40" height="40" class="menu-user-border">
+                </div>
+                <h4>Ryan Guilherme</h4>
+                <p>email@email.com</p>
+            </div>
+        </nav>
+    </section>
+
+    <section class="section-white dashboard">
+        <div class="titulo-dashboard">
+            <div>
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="a a2">
+                <div>
+                    <p>Período</p>
+                </div>
+
+                <div>
+                    <select name="fperiodo" id="fperiodo" class="a3">
+                        <option value="3">Últimos 3 meses</option>
+                        <option value="6">Últimos 6 meses</option>
+                        <option value="12">Últimos 12 meses</option>
+                    </select>
+                </div>
+
+                <div class="a4">
+                    <a href="/#$">
+                        <i class="fa-solid fa-download fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="b">
+
+            <div class="b2 b3">
+                <h3>Exames pendentes</h3>
+                <div class="b4">
+                    <p class="p-bold">50</p>
+                </div>
+            </div>
+
+            <div class="b2 b3">
+                <h3>Municípios</h3>
+                <div class="b4">
+                    <p class="p-bold">21</p>
+                    <div class="b5">
+                        <p>3.64%</p>
+                        <i class="fa-solid fa-arrow-trend-up" style="color: #10b156;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="b2 b3">
+                <h3>Exames realizados</h3>
+                <div class="b4">
+                    <p class="p-bold">500</p>
+                    <div class="b6">
+                        <p>5.04%</p>
+                        <i class="fa-solid fa-arrow-trend-down" style="color: #f92424;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="b2 b3">
+                <h3>Total dos exames</h3>
+                <div class="b4">
+                    <p class="p-bold">R$ 2.598,84</p>
+                    <div class="b5">
+                        <p>10.98%</p>
+                        <i class="fa-solid fa-arrow-trend-up" style="color: #10b156;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="b2 b3">
+                <h3>Total das taxas</h3>
+                <div class="b4">
+                    <p class="p-bold">R$ 500,00</p>
+                    <div class="b5">
+                        <p>10.98%</p>
+                        <i class="fa-solid fa-arrow-trend-up" style="color: #10b156;"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="c f">
+            <h3>Gráficos</h3>
+            <div class="c2">
+                <canvas id="myChart" style="height: 350px;"></canvas>
+            </div>
+        </div>
+
+        <div class="d">
+            <h3>Destaques</h3>
+            <div class="d2">
+                <div class="d3">
+                    <h5>Exames mais solicitados</h5>
+                    <hr>
+                    <table class="e">
+                        <thead>
+                            <tr class="e2">
+                                <td>Nome</td>
+                                <td class="e4">Quantidade</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="e3">
+                                <td>Radiografia de Coluna Cervical (ap + Lateral + TO + Obliquas)</td>
+                                <td class="e4">62</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Ultrassonografia de Articulação</td>
+                                <td class="e4">57</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Tomografia Computadorizada de Coluna Torácica</td>
+                                <td class="e4">41</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Ressonância Magnética de Tórax</td>
+                                <td class="e4">34</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Radiografia de Abdômen Simples (ap)</td>
+                                <td class="e4">12</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Ultrassonografia de Abdômen Total</td>
+                                <td class="e4">10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="d3">
+                    <h5>Municípios que mais solicitaram exames</h5>
+                    <hr>
+                    <table class="e">
+                        <thead>
+                            <tr class="e2 fcoluna">
+                                <td>Nome</td>
+                                <td class="e4">Quantidade</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="e3">
+                                <td>Amparo do São Francisco</td>
+                                <td class="e4">295</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Laranjeiras</td>
+                                <td class="e4">270</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Tomar do Geru</td>
+                                <td class="e4">235</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Nossa Senhora de Lourdes</td>
+                                <td class="e4">200</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Estância</td>
+                                <td class="e4">160</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Lagarto</td>
+                                <td class="e4">130</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="d3">
+                    <h5>Quantidade por categoria</h5>
+                    <hr>
+                    <table class="e">
+                        <thead>
+                            <tr class="e2 fcoluna">
+                                <td>Nome</td>
+                                <td class="e4">Quantidade</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="e3">
+                                <td>Radiografia</td>
+                                <td class="e4">274</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Ultrassonografia</td>
+                                <td class="e4">192</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Tomografia</td>
+                                <td class="e4">151</td>
+                            </tr>
+                            <tr class="e3">
+                                <td>Ressonância</td>
+                                <td class="e4">109</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Obter a URL atual
+        const currentUrl = window.location.href;
+
+        // Selecionar todos os itens de menu
+        const menuItems = document.querySelectorAll('.menu-menu ul li a');
+
+        menuItems.forEach(item => {
+            // Verificar se o link do item corresponde à URL atual
+            if (item.href === currentUrl) {
+                // Adicionar a classe 'active' ao item pai (li)
+                item.parentElement.classList.add('active');
+            }
+        });
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+        const data = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    label: 'Radiografia',
+                    data: [500, 700, 900, 600, 800, 400, 1000, 500, 700, 600, 900, 700],
+                    backgroundColor: 'rgba(17, 141, 255, 1)',
+                    borderColor: 'rgba(17, 141, 255, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Ultrassonografia',
+                    data: [300, 400, 600, 700, 500, 800, 900, 600, 500, 700, 600, 400],
+                    backgroundColor: 'rgba(18, 35, 158, 1)',
+                    borderColor: 'rgba(18, 35, 158, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Ressonância',
+                    data: [700, 500, 400, 900, 600, 700, 500, 400, 600, 500, 700, 600],
+                    backgroundColor: 'rgba(230, 108, 55, 1)',
+                    borderColor: 'rgba(230, 108, 55, 1)',
+                    borderWidth: 1
+                }
+            ]
+        };
+
+        // Calculando a média de cada mês
+        const monthlyAverage = data.datasets[0].data.map((_, i) => {
+            const total = data.datasets.reduce((sum, dataset) => sum + dataset.data[i], 0);
+            return total / data.datasets.length;
+        });
+
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 1000
+                    }
+                },
+                plugins: {
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                yMin: monthlyAverage[0],
+                                yMax: monthlyAverage[11],
+                                borderColor: 'rgba(0, 0, 0, 1)',
+                                borderWidth: 2,
+                                label: {
+                                    enabled: true,
+                                    content: 'Média'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
