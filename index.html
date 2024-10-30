@@ -10,6 +10,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
+    <style>
+        #popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding-top: 20%;
+            z-index: 1000;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -47,6 +63,7 @@
         </div>
 
     </section>
+
     <script>
         function isMobileDevice() {
             return /Mobi|Android/i.test(navigator.userAgent);

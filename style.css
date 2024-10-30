@@ -1140,3 +1140,12 @@ tr td a .icone-exames {
     padding-top: 20%;
     z-index: 1000;
 }
+
+.icone-download {
+    font-size: 1.9rem;
+}
+
+.icone-config {
+    font-size: 2.2rem;
+    margin-left: 1rem;
+}
